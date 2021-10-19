@@ -1,0 +1,14 @@
+C:\Users\Nfol\source\repos\Trik2\Trik2\bin\Debug\netcoreapp3.1\Trik2.exe
+C:\Users\Nfol\source\repos\Trik2\Trik2\bin\Debug\netcoreapp3.1\Trik2.deps.json
+C:\Users\Nfol\source\repos\Trik2\Trik2\bin\Debug\netcoreapp3.1\Trik2.runtimeconfig.json
+C:\Users\Nfol\source\repos\Trik2\Trik2\bin\Debug\netcoreapp3.1\Trik2.runtimeconfig.dev.json
+C:\Users\Nfol\source\repos\Trik2\Trik2\bin\Debug\netcoreapp3.1\Trik2.dll
+C:\Users\Nfol\source\repos\Trik2\Trik2\bin\Debug\netcoreapp3.1\Trik2.pdb
+C:\Users\Nfol\source\repos\Trik2\Trik2\obj\Debug\netcoreapp3.1\Trik2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nfol\source\repos\Trik2\Trik2\obj\Debug\netcoreapp3.1\Trik2.AssemblyInfoInputs.cache
+C:\Users\Nfol\source\repos\Trik2\Trik2\obj\Debug\netcoreapp3.1\Trik2.AssemblyInfo.cs
+C:\Users\Nfol\source\repos\Trik2\Trik2\obj\Debug\netcoreapp3.1\Trik2.csproj.CoreCompileInputs.cache
+C:\Users\Nfol\source\repos\Trik2\Trik2\obj\Debug\netcoreapp3.1\Trik2.dll
+C:\Users\Nfol\source\repos\Trik2\Trik2\obj\Debug\netcoreapp3.1\Trik2.pdb
+C:\Users\Nfol\source\repos\Trik2\Trik2\obj\Debug\netcoreapp3.1\Trik2.genruntimeconfig.cache
+C:\Users\Nfol\source\repos\Trik2\Trik2\obj\Debug\netcoreapp3.1\Trik2.csproj.AssemblyReference.cache
