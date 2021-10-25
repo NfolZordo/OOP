@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nfol\\source\\repos\\Trik2\\Trik2\\Trik2.csproj": {}
+    "D:\\II-K_I-C\\OOП\\М\\ТрикутникЧотирикут\\Trik2\\Trik2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nfol\\source\\repos\\Trik2\\Trik2\\Trik2.csproj": {
+    "D:\\II-K_I-C\\OOП\\М\\ТрикутникЧотирикут\\Trik2\\Trik2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nfol\\source\\repos\\Trik2\\Trik2\\Trik2.csproj",
+        "projectUniqueName": "D:\\II-K_I-C\\OOП\\М\\ТрикутникЧотирикут\\Trik2\\Trik2.csproj",
         "projectName": "Trik2",
-        "projectPath": "C:\\Users\\Nfol\\source\\repos\\Trik2\\Trik2\\Trik2.csproj",
+        "projectPath": "D:\\II-K_I-C\\OOП\\М\\ТрикутникЧотирикут\\Trik2\\Trik2.csproj",
         "packagesPath": "C:\\Users\\Nfol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nfol\\source\\repos\\Trik2\\Trik2\\obj\\",
+        "outputPath": "D:\\II-K_I-C\\OOП\\М\\ТрикутникЧотирикут\\Trik2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"

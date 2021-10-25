@@ -127,8 +127,9 @@ namespace ConsoleApp1
     {
         public double area, halfPerim, ah, bh, ch, ro, rv, ak, bk, ck, dk, la, lb, lc, ma, mb, mc, a, b, c, d, d1, d2;
     }
-    class Triangle : GeometricShapes                                
+    class Triangle : GeometricShapes
     {
+        public Triangle() { }
         public Triangle(int at, int bt, int ct)                      //три сторони
         {
             a = at;
@@ -136,30 +137,9 @@ namespace ConsoleApp1
             c = ct;
             halfPerim = (Convert.ToDouble(a + b + c) / 2);
             area = Math.Sqrt(halfPerim * (halfPerim - a) * (halfPerim - b) * (halfPerim - c));
-            if (a > b && a > c)
-            {
-                bk = (Math.Asin((area * 2) / (c * a))) * 180 / Math.PI;
-                ck = (Math.Asin((area * 2) / (a * b))) * 180 / Math.PI;
-                ak = 180 - bk - ck;
-            }
-            else if (b > a && b > c)
-            {
-                ak = (Math.Asin((area * 2) / (c * b))) * 180 / Math.PI;
-                ck = (Math.Asin((area * 2) / (a * b))) * 180 / Math.PI;
-                bk = 180 - ak - ck;
-            }
-            else if (c > a && c > b)
-            {
-                ak = (Math.Asin((area * 2) / (c * b))) * 180 / Math.PI;
-                bk = (Math.Asin((area * 2) / (c * a))) * 180 / Math.PI;
-                ck = 180 - ak - bk;
-            }
-            else
-            {
-                ak = (Math.Asin((area * 2) / (c * b))) * 180 / Math.PI;
-                bk = (Math.Asin((area * 2) / (c * a))) * 180 / Math.PI;
-                ck = (Math.Asin((area * 2) / (a * b))) * 180 / Math.PI;
-            }
+            ak = getAngl(a, b, c, area);
+            bk = getAngl(b, a, c, area);
+            ck = getAngl(c, a, b, area);
             printResult();
         }
         public Triangle(int at, int bt, double ckt)                  //двi сторони i кут
@@ -169,21 +149,9 @@ namespace ConsoleApp1
             ck = ckt;
             area = (a * b * (Math.Sin(ck / 180 * Math.PI))) / 2;
             c = (Math.Sqrt((a * a) + (b * b) - (2 * a * b) * (Math.Cos(ck / 180 * Math.PI))));
-            if (a > b && a > c)
-            {
-                bk = (Math.Asin((area * 2) / (c * a))) * 180 / Math.PI;
-                ak = 180 - bk - ck;
-            }
-            else if (b > a && b > c)
-            {
-                ak = (Math.Asin((area * 2) / (c * b))) * 180 / Math.PI;
-                bk = 180 - ak - ck;
-            }
-            else
-            {
-                ak = (Math.Asin((area * 2) / (c * b))) * 180 / Math.PI;
-                bk = (Math.Asin((area * 2) / (c * a))) * 180 / Math.PI;
-            }
+            ak = getAngl(a, b, c, area);
+            bk = getAngl(b, a, c, area);
+
             halfPerim = (Convert.ToDouble(a + b + c) / 2);
             if (a + b > c && a + c > b && b + c > a && a > 0 && b > 0 && c > 0)
             {
@@ -214,6 +182,32 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("Такий трикутник не iснує введiть iнше значення.");
             }
+        }
+        public double getAngleAcute(double a, double b, double area)     //приймає дві сторони і площу, повертає кут між ними (тільки гострий)
+        {
+            return ((Math.Asin((area * 2) / (a * b))) * 180 / Math.PI);
+
+        }
+        public double getAngl(double a, double b, double c, double area)  //приймає 3 сторони і площу, повиртає кут навпроти першої сторони
+        {
+            double akr;
+            if (a > b && a > c)
+            {
+                akr = 180 - getAngleAcute(c, a, area) - getAngleAcute(a, b, area);
+            }
+            else if (b > a && b > c)
+            {
+                akr = getAngleAcute(c, b, area);
+            }
+            else if (c > a && c > b)
+            {
+                akr = getAngleAcute(c, b, area);
+            }
+            else
+            {
+                akr = getAngleAcute(c, b, area);
+            }
+            return (akr);
         }
         public void printResult()                                    //результати трикутника
         {
@@ -261,9 +255,9 @@ namespace ConsoleApp1
             Console.WriteLine($"медiана до сторони a={Math.Round(ma, 2)}");
             Console.WriteLine($"медiана до сторони b={Math.Round(mb, 2)}");
             Console.WriteLine($"медiана до сторони c={Math.Round(mc, 2)}");
-        }                              
+        }
     }
-    class Square : GeometricShapes
+    class Square : Triangle
     {
         public Square(int at, int bt, int ct, int dt, double akt, double ckt)
         {
@@ -279,37 +273,20 @@ namespace ConsoleApp1
 
             double tymeArea = (a * b * (Math.Sin(ck / 180 * Math.PI))) / 2;
             d1 = (Math.Sqrt((a * a) + (b * b) - (2 * a * b) * (Math.Cos(ak / 180 * Math.PI))));
-            {
+            {    //Тимчасові кути
                 //-----abd1----------------------------------------------------------------------------
                 double halfPerimTyme = (a + b + d1) / 2;
                 double areaTyme = Math.Sqrt(halfPerimTyme * (halfPerimTyme - a) * (halfPerimTyme - b) * (halfPerimTyme - d1));
-                if (a > b && a > d1)
-                {
-                    bkd1 = (Math.Asin((areaTyme * 2) / (d1 * a))) * 180 / Math.PI;
-                    ckd1 = (Math.Asin((areaTyme * 2) / (a * b))) * 180 / Math.PI;
-                    akd1 = 180 - bk - ckd1;
-                }
-                else if (b > a && b > d1)
-                {
-                    akd1 = (Math.Asin((areaTyme * 2) / (d1 * b))) * 180 / Math.PI;
-                    ckd1 = (Math.Asin((areaTyme * 2) / (a * b))) * 180 / Math.PI;
-                    bkd1 = 180 - akd1 - ckd1;
-                }
-                else if (d1 > a && d1 > b)
-                {
-                    akd1 = (Math.Asin((areaTyme * 2) / (1d * b))) * 180 / Math.PI;
-                    bkd1 = (Math.Asin((areaTyme * 2) / (d1 * a))) * 180 / Math.PI;
-                    ckd1 = 180 - akd1 - bkd1;
-                }
-                else
-                {
-                    akd1 = (Math.Asin((areaTyme * 2) / (d1 * b))) * 180 / Math.PI;
-                    bkd1 = (Math.Asin((areaTyme * 2) / (d1 * a))) * 180 / Math.PI;
-                    ckd1 = (Math.Asin((areaTyme * 2) / (a * b))) * 180 / Math.PI;
-                }
+                bkd1 = getAngl(b, a, d1, area);
+                ckd1 = getAngl(d1, a, b, area);
+                akd1 = getAngl(a, b, d1, area);
                 //-----cdd1----------------------------------------------------------------------------
                 halfPerimTyme = (c + d + d1) / 2;
                 areaTyme = Math.Sqrt(halfPerimTyme * (halfPerimTyme - c) * (halfPerimTyme - d) * (halfPerimTyme - d1));
+                bkd1 = getAngl(b, a, d1, area);
+                ckd1 = getAngl(d1, a, b, area);
+                akd1 = getAngl(a, b, d1, area);
+
                 if (c > d && c > d1)
                 {
                     bkd2 = (Math.Asin((areaTyme * 2) / (d1 * c))) * 180 / Math.PI;
@@ -381,6 +358,6 @@ namespace ConsoleApp1
             Console.WriteLine($"радiус вписаного кола= {Math.Round(rv, 2)}");
             Console.WriteLine($"Дiагональ d1= {Math.Round(d1, 2)}");
             Console.WriteLine($"Дiагональ d2= {Math.Round(d2, 2)}");
-        }              
+        }
     }
 }
