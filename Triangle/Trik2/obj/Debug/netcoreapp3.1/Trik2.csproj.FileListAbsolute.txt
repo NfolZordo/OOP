@@ -26,3 +26,17 @@ D:\II-K_I-C\OOП\М\ТрикутникЧотирикут\Trik2\obj\Debug\netcore
 D:\II-K_I-C\OOП\М\ТрикутникЧотирикут\Trik2\obj\Debug\netcoreapp3.1\Trik2.dll
 D:\II-K_I-C\OOП\М\ТрикутникЧотирикут\Trik2\obj\Debug\netcoreapp3.1\Trik2.pdb
 D:\II-K_I-C\OOП\М\ТрикутникЧотирикут\Trik2\obj\Debug\netcoreapp3.1\Trik2.genruntimeconfig.cache
+D:\II-K_I-C\OOП\М\Triangle\Trik2\bin\Debug\netcoreapp3.1\Trik2.exe
+D:\II-K_I-C\OOП\М\Triangle\Trik2\bin\Debug\netcoreapp3.1\Trik2.deps.json
+D:\II-K_I-C\OOП\М\Triangle\Trik2\bin\Debug\netcoreapp3.1\Trik2.runtimeconfig.json
+D:\II-K_I-C\OOП\М\Triangle\Trik2\bin\Debug\netcoreapp3.1\Trik2.runtimeconfig.dev.json
+D:\II-K_I-C\OOП\М\Triangle\Trik2\bin\Debug\netcoreapp3.1\Trik2.dll
+D:\II-K_I-C\OOП\М\Triangle\Trik2\bin\Debug\netcoreapp3.1\Trik2.pdb
+D:\II-K_I-C\OOП\М\Triangle\Trik2\obj\Debug\netcoreapp3.1\Trik2.csproj.AssemblyReference.cache
+D:\II-K_I-C\OOП\М\Triangle\Trik2\obj\Debug\netcoreapp3.1\Trik2.GeneratedMSBuildEditorConfig.editorconfig
+D:\II-K_I-C\OOП\М\Triangle\Trik2\obj\Debug\netcoreapp3.1\Trik2.AssemblyInfoInputs.cache
+D:\II-K_I-C\OOП\М\Triangle\Trik2\obj\Debug\netcoreapp3.1\Trik2.AssemblyInfo.cs
+D:\II-K_I-C\OOП\М\Triangle\Trik2\obj\Debug\netcoreapp3.1\Trik2.csproj.CoreCompileInputs.cache
+D:\II-K_I-C\OOП\М\Triangle\Trik2\obj\Debug\netcoreapp3.1\Trik2.dll
+D:\II-K_I-C\OOП\М\Triangle\Trik2\obj\Debug\netcoreapp3.1\Trik2.pdb
+D:\II-K_I-C\OOП\М\Triangle\Trik2\obj\Debug\netcoreapp3.1\Trik2.genruntimeconfig.cache

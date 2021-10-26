@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace ConsoleApp1
 {
     class Program
@@ -16,6 +15,7 @@ namespace ConsoleApp1
             while (type != 3)
             {
                 menu = 0;
+                Console.Clear();
                 Console.WriteLine("Виберiть тип фiгури: 1-Трикутник, 2-Чотирикутник 3-Завершити роботу");
                 type = Convert.ToInt32(Console.ReadLine());
 
@@ -89,7 +89,7 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine("Виберiть тип створеннятрикутника: 1-чотири сторони i два кута, 4-Завершити роботу");
                     menu = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("   ____A___    ");
+                    Console.WriteLine("   ____A____    ");
                     Console.WriteLine("  a|\\    /|d  ");
                     Console.WriteLine("   | \\  / |   ");
                     Console.WriteLine("  B|  \\/  | D ");
@@ -112,6 +112,10 @@ namespace ConsoleApp1
                         Console.WriteLine("Введiть кут с ");
                         double ck = Convert.ToDouble(Console.ReadLine());
                         new Square(a, b, c, d, bk, ck);
+                    }
+                    else if (menu == 4)
+                    {
+                        type = 3;
                     }
                     if (menu != 4)
                     {
@@ -185,8 +189,8 @@ namespace ConsoleApp1
         }
         public double getAngleAcute(double a, double b, double area)     //приймає дві сторони і площу, повертає кут між ними (тільки гострий)
         {
-            return ((Math.Asin((area * 2) / (a * b))) * 180 / Math.PI);
-
+            double sdf = Math.Asin((area * 2) / (a * b)) *180 / Math.PI;
+            return (sdf);
         }
         public double getAngl(double a, double b, double c, double area)  //приймає 3 сторони і площу, повиртає кут навпроти першої сторони
         {
@@ -194,14 +198,6 @@ namespace ConsoleApp1
             if (a > b && a > c)
             {
                 akr = 180 - getAngleAcute(c, a, area) - getAngleAcute(a, b, area);
-            }
-            else if (b > a && b > c)
-            {
-                akr = getAngleAcute(c, b, area);
-            }
-            else if (c > a && c > b)
-            {
-                akr = getAngleAcute(c, b, area);
             }
             else
             {
@@ -277,43 +273,18 @@ namespace ConsoleApp1
                 //-----abd1----------------------------------------------------------------------------
                 double halfPerimTyme = (a + b + d1) / 2;
                 double areaTyme = Math.Sqrt(halfPerimTyme * (halfPerimTyme - a) * (halfPerimTyme - b) * (halfPerimTyme - d1));
-                bkd1 = getAngl(b, a, d1, area);
-                ckd1 = getAngl(d1, a, b, area);
-                akd1 = getAngl(a, b, d1, area);
+                bkd1 = getAngl(b, a, d1, areaTyme);
+                ck = getAngl(d1, a, b, areaTyme);
+                akd1 = getAngl(a, b, d1, areaTyme);
                 //-----cdd1----------------------------------------------------------------------------
                 halfPerimTyme = (c + d + d1) / 2;
                 areaTyme = Math.Sqrt(halfPerimTyme * (halfPerimTyme - c) * (halfPerimTyme - d) * (halfPerimTyme - d1));
-                bkd1 = getAngl(b, a, d1, area);
-                ckd1 = getAngl(d1, a, b, area);
-                akd1 = getAngl(a, b, d1, area);
-
-                if (c > d && c > d1)
-                {
-                    bkd2 = (Math.Asin((areaTyme * 2) / (d1 * c))) * 180 / Math.PI;
-                    ckd2 = (Math.Asin((areaTyme * 2) / (c * d))) * 180 / Math.PI;
-                    akd2 = 180 - bkd2 - ckd2;
-                }
-                else if (d > c && d > c)
-                {
-                    akd2 = (Math.Asin((areaTyme * 2) / (d1 * d))) * 180 / Math.PI;
-                    ckd2 = (Math.Asin((areaTyme * 2) / (c * d))) * 180 / Math.PI;
-                    bkd2 = 180 - akd2 - ckd2;
-                }
-                else if (d1 > c && d1 > d)
-                {
-                    akd2 = (Math.Asin((areaTyme * 2) / (1d * d))) * 180 / Math.PI;
-                    bkd2 = (Math.Asin((areaTyme * 2) / (d1 * c))) * 180 / Math.PI;
-                    ckd2 = 180 - akd2 - bkd2;
-                }
-                else
-                {
-                    akd2 = (Math.Asin((areaTyme * 2) / (d1 * d))) * 180 / Math.PI;
-                    bkd2 = (Math.Asin((areaTyme * 2) / (d1 * c))) * 180 / Math.PI;
-                    ckd2 = (Math.Asin((areaTyme * 2) / (c * d))) * 180 / Math.PI;
-                }
+                bkd2 = getAngl(d, c, d1, areaTyme);
+                ck = getAngl(d1, c, d, areaTyme);
+                akd2 = 180 - bkd2 - ck;
             } //Тимчасові кути
             bk = akd1 + bkd2;
-            dk = bkd1 + ckd2;
+            dk = bkd1 + akd2;
             tymeArea = (c * b * (Math.Sin(bk / 180 * Math.PI))) / 2;
             d2 = (Math.Sqrt((c * c) + (b * b) - (2 * c * b) * (Math.Cos(bk / 180 * Math.PI))));
             printResultKv();
