@@ -89,7 +89,7 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine("Виберiть тип створеннятрикутника: 1-чотири сторони i два кута, 4-Завершити роботу");
                     menu = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("   ____A____    ");
+                    Console.WriteLine("   ____A____   ");
                     Console.WriteLine("  a|\\    /|d  ");
                     Console.WriteLine("   | \\  / |   ");
                     Console.WriteLine("  B|  \\/  | D ");
@@ -146,11 +146,8 @@ namespace ConsoleApp1
             ck = getAngl(c, a, b, area);
             printResult();
         }
-        public Triangle(int at, int bt, double ckt)                  //двi сторони i кут
+        public Triangle(int a, int b, double ck)                  //двi сторони i кут
         {
-            a = at;
-            b = bt;
-            ck = ckt;
             area = (a * b * (Math.Sin(ck / 180 * Math.PI))) / 2;
             c = (Math.Sqrt((a * a) + (b * b) - (2 * a * b) * (Math.Cos(ck / 180 * Math.PI))));
             ak = getAngl(a, b, c, area);
@@ -166,11 +163,8 @@ namespace ConsoleApp1
                 Console.WriteLine("Такий трикутник не iснує, введiть iнше значення.");
             }
         }
-        public Triangle(int at, double akt, double bkt)              //сторона i два кути
+        public Triangle(int a, double ak, double bk)              //сторона i два кути
         {
-            a = at;
-            bk = akt;
-            ck = bkt;
 
             ak = 180 - ck - bk;
             c = a * (Math.Sin(ck / 180 * Math.PI) / Math.Sin(ak / 180 * Math.PI));
@@ -255,15 +249,9 @@ namespace ConsoleApp1
     }
     class Square : Triangle
     {
-        public Square(int at, int bt, int ct, int dt, double akt, double ckt)
+        public Square(int a, int b, int c, int d, double ak, double ck)
         {
-            a = at;
-            b = bt;
-            c = ct;
-            d = dt;
-            ak = akt;
-            ck = ckt;
-            double akd1, ckd1, bkd1, akd2, ckd2, bkd2;
+            double akd1, bkd1, akd2, bkd2;
             halfPerim = (Convert.ToDouble(a + b + c + d) / 2);
             area = Math.Sqrt(halfPerim * (halfPerim - a) * (halfPerim - b) * (halfPerim - c) - (a * b * c * d * Math.Pow(Math.Cos(((ak + ck) / 2) / 180 * Math.PI), 2)));
 
@@ -313,7 +301,6 @@ namespace ConsoleApp1
             {
                 typeAngle = "довiльний ";
             }
-
             Console.WriteLine("         РЕЗУЛЬТАТ          ");
             Console.WriteLine($"Чотирикутник {typeAngle}");
             Console.WriteLine($"периметр = {Math.Round(halfPerim * 2, 2)}");
