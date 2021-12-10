@@ -127,9 +127,11 @@ namespace ConsoleApp1
             }
         }
     }
-    class GeometricShapes
+    abstract class GeometricShapes
     {
         public double area, halfPerim, ah, bh, ch, ro, rv, ak, bk, ck, dk, la, lb, lc, ma, mb, mc, a, b, c, d, d1, d2;
+
+
     }
     class Triangle : GeometricShapes
     {

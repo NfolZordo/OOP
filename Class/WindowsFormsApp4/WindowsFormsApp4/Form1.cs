@@ -39,100 +39,91 @@ namespace WindowsFormsApp4
                 Hearse hearse = new Hearse();
                 label7.Text = hearse.mass.ToString();
                 richTextBox1.Text = hearse.characteristic.ToString();
-                pictureBox1.Image = Image.FromFile("C:\\Users\\nfolz\\source\\repos\\WindowsFormsApp4\\img\\1.jfif");
+                pictureBox1.Image = Image.FromFile("D:\\II-K_I-C\\OOП\\М\\Class\\WindowsFormsApp4\\img\\1.jfif");
             }            
             if (radioButton2.Checked)
             {
                 ConventionalFireEngine car = new ConventionalFireEngine();
                 label7.Text = car.mass.ToString();
                 richTextBox1.Text = car.characteristic.ToString();
-                pictureBox1.Image = Image.FromFile("C:\\Users\\nfolz\\source\\repos\\WindowsFormsApp4\\img\\2.png");
+                pictureBox1.Image = Image.FromFile("D:\\II-K_I-C\\OOП\\М\\Class\\WindowsFormsApp4\\img\\2.png");
             }            
             if (radioButton3.Checked)
             {
                 AerialApparatus car = new AerialApparatus();
                 label7.Text = car.mass.ToString();
                 richTextBox1.Text = car.characteristic.ToString();
-                pictureBox1.Image = Image.FromFile("C:\\Users\\nfolz\\source\\repos\\WindowsFormsApp4\\img\\3.jpg");
+                pictureBox1.Image = Image.FromFile("D:\\II-K_I-C\\OOП\\М\\Class\\WindowsFormsApp4\\img\\3.jpg");
             }
             if (radioButton4.Checked)
             {
                 TurntableLadder car = new TurntableLadder();
                 label7.Text = car.mass.ToString();
                 richTextBox1.Text = car.characteristic.ToString();
-                pictureBox1.Image = Image.FromFile("C:\\Users\\nfolz\\source\\repos\\WindowsFormsApp4\\img\\4.jpg");
+                pictureBox1.Image = Image.FromFile("D:\\II-K_I-C\\OOП\\М\\Class\\WindowsFormsApp4\\img\\4.jpg");
             }
             if (radioButton5.Checked)
             {
                 SnowBlowers car = new SnowBlowers();
                 label7.Text = car.mass.ToString();
                 richTextBox1.Text = car.characteristic.ToString();
-                pictureBox1.Image = Image.FromFile("C:\\Users\\nfolz\\source\\repos\\WindowsFormsApp4\\img\\5.jpg");
+                pictureBox1.Image = Image.FromFile("D:\\II-K_I-C\\OOП\\М\\Class\\WindowsFormsApp4\\img\\5.jpg");
             }
             if (radioButton6.Checked)
             {
                 GarbageTruck car = new GarbageTruck();
                 label7.Text = car.mass.ToString();
                 richTextBox1.Text = car.characteristic.ToString();
-                pictureBox1.Image = Image.FromFile("C:\\Users\\nfolz\\source\\repos\\WindowsFormsApp4\\img\\6.jpg");
+                pictureBox1.Image = Image.FromFile("D:\\II-K_I-C\\OOП\\М\\Class\\WindowsFormsApp4\\img\\6.jpg");
             }
             if (radioButton7.Checked)
             {
                 StreetSweeper car = new StreetSweeper();
                 label7.Text = car.mass.ToString();
                 richTextBox1.Text = car.characteristic.ToString();
-                pictureBox1.Image = Image.FromFile("C:\\Users\\nfolz\\source\\repos\\WindowsFormsApp4\\img\\7.jpg");
+                pictureBox1.Image = Image.FromFile("D:\\II-K_I-C\\OOП\\М\\Class\\WindowsFormsApp4\\img\\7.jpg");
             }
-
             if (radioButton8.Checked)
             {
                 ClassA car = new ClassA();
                 label7.Text = car.mass.ToString();
                 richTextBox1.Text = car.characteristic.ToString();
-                pictureBox1.Image = Image.FromFile("C:\\Users\\nfolz\\source\\repos\\WindowsFormsApp4\\img\\8.jpg");
+                pictureBox1.Image = Image.FromFile("D:\\II-K_I-C\\OOП\\М\\Class\\WindowsFormsApp4\\img\\8.jpg");
             }
-
             if (radioButton9.Checked)
             {
                 ClassB car = new ClassB();
                 label7.Text = car.mass.ToString();
                 richTextBox1.Text = car.characteristic.ToString();
-                pictureBox1.Image = Image.FromFile("C:\\Users\\nfolz\\source\\repos\\WindowsFormsApp4\\img\\9.jpg");
+                pictureBox1.Image = Image.FromFile("D:\\II-K_I-C\\OOП\\М\\Class\\WindowsFormsApp4\\img\\9.jpg");
             }
-
             if (radioButton10.Checked)
             {
                 ClassC car = new ClassC();
                 label7.Text = car.mass.ToString();
                 richTextBox1.Text = car.characteristic.ToString();
-                pictureBox1.Image = Image.FromFile("C:\\Users\\nfolz\\source\\repos\\WindowsFormsApp4\\img\\10.jpg");
+                pictureBox1.Image = Image.FromFile("D:\\II-K_I-C\\OOП\\М\\Class\\WindowsFormsApp4\\img\\10.jpg");
             }
-
             if (radioButton11.Checked)
             {
                 WheeledTruckCrane car = new WheeledTruckCrane(10);
                 label7.Text = car.mass.ToString();
                 richTextBox1.Text = car.characteristic.ToString();
-                pictureBox1.Image = Image.FromFile("C:\\Users\\nfolz\\source\\repos\\WindowsFormsApp4\\img\\11.jpg");
+                pictureBox1.Image = Image.FromFile("D:\\II-K_I-C\\OOП\\М\\Class\\WindowsFormsApp4\\img\\11.jpg");
             }
-
             if (radioButton12.Checked)
             {
                 CrawlerCrane car = new CrawlerCrane("Тип г.");
                 label7.Text = car.mass.ToString();
                 richTextBox1.Text = car.characteristic.ToString();
-                pictureBox1.Image = Image.FromFile("C:\\Users\\nfolz\\source\\repos\\WindowsFormsApp4\\img\\12.jpg");
+                pictureBox1.Image = Image.FromFile("D:\\II-K_I-C\\OOП\\М\\Class\\WindowsFormsApp4\\img\\12.jpg");
             }
-
         }
-
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
 
         }
     }
-
-
     abstract class SpecialCars
     {
         internal string characteristic { get; set; }
@@ -141,7 +132,6 @@ namespace WindowsFormsApp4
 
     internal class Hearse : SpecialCars                          //Катафалк
     {
-
         protected internal int maxNumberSeats;                 //макс кількість місць
         protected internal int numberBodies;                 //кількість тіл
         protected internal Hearse()
@@ -199,7 +189,6 @@ namespace WindowsFormsApp4
                 return characteristic;
             }
         }
-
     }
     class AerialApparatus : FireEngine
     {
