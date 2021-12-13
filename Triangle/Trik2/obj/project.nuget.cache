@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "mXu+Q1vVAnP/f1jt35DcoQN2AoNNoV22qWQUsdx8b6LogBnGuTp+3BFrghCjgHjkCQUyNu8WQJV50YQBmHgIrg==",
+  "dgSpecHash": "//D7qf3EZ1C8f8Vl7KFzu396IlLz1Thur+sSxLi94DuWZorPV36LBbKCzXEoaWMyIMRxqANhPJ4qakZ1cUX1oQ==",
   "success": true,
-  "projectFilePath": "D:\\II-K_I-C\\OOП\\М\\Triangle\\Trik2\\Trik2.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\nfolz\\Desktop\\yn\\2k\\OOP\\Triangle\\Trik2\\Trik2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nfolz\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.21\\microsoft.netcore.app.host.win-x64.3.1.21.nupkg.sha512",
+    "C:\\Users\\nfolz\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\nfolz\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\nfolz\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
   "logs": []
 }

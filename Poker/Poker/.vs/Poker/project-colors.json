@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "970ab213-80ea-4c1c-a775-d29741cbc358": {
+      "ProjectGuid": "970ab213-80ea-4c1c-a775-d29741cbc358",
+      "DisplayName": "Poker",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
