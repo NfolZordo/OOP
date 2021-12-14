@@ -5,14 +5,6 @@ class Game
     {
         while (true)
         {
-            var rand = new Random();
-            string[] cardsOnTable = new string[5];
-            string blankText = cardsOnTable[0];
-            int menu;
-            int rateOver = 0;                                               //зроблена ставка
-            int upperOver = 2;                                             //піднята ставка
-            int whoIsFirstRand = rand.Next(0, 2);                         //чий перший крок
-
             Console.Clear();
             Console.WriteLine("Введiть початкову кiлькiсть $ для ставок ");
             int startPoint;
@@ -23,27 +15,41 @@ class Game
 
             catch (System.IndexOutOfRangeException)
             {
-                Console.WriteLine("Ви ввели невірне значення, спробуйте ще раз ");
+                Console.WriteLine("Ви ввели невiрне значення, спробуйте ще раз ");
                 startPoint = Convert.ToInt32(Console.ReadLine());
             }
-            Deck firstDeck = new Deck();                                                 //колода
+            var rand = new Random();
+            
+            int menu;
+
+            RESTART:
+            string[] cardsOnTable = new string[5];
+            string blankText = cardsOnTable[0];
+            int rateOver = 0;                                               //зроблена ставка
+            int upperOver = 2;                                             //пiднята ставка
+            int whoIsFirstRand = rand.Next(0, 2);                         //чий перший крок
+            Deck firstDeck = new Deck();                                 //колода
             string[] cardsInHand1 = { firstDeck.handOutCard(), firstDeck.handOutCard() };
             Player player1 = new Player(startPoint, cardsInHand1);
             string[] cardsInHand2 = { firstDeck.handOutCard(), firstDeck.handOutCard() };
             Player player2 = new Player(startPoint, cardsInHand2);
             
+
             if (whoIsFirstRand == 0)                                            //роздача / етап 1
             {
-                player1.makeBet(1);    //0  я-1 він-2
+                player1.makeBet(1);    //0  я-1 вiн-2
                 player2.makeBet(2);  
             }
             else
             {
-                player1.makeBet(2);    //1  я-2 він-1
+                player1.makeBet(2);    //1  я-2 вiн-1
                 player2.makeBet(1);
             }
             rateOver += 3;
-
+            player1.Rate = 2;
+            player2.Rate = 2;
+            do
+            {
             if (whoIsFirstRand == 1)                                 // етап 2
             {
                 player2.makeBet(upperOver);
@@ -55,27 +61,30 @@ class Game
             {
                 menu = Convert.ToInt32(Console.ReadLine());
             }
-
             catch (System.IndexOutOfRangeException)
             {
-                Console.WriteLine("Ви ввели невірне значення, спробуйте ще раз ");
+                Console.WriteLine("Ви ввели невiрне значення, спробуйте ще раз ");
                 menu = Convert.ToInt32(Console.ReadLine());
             }
             if (menu == 1)
             {
-                continue;
-            }
+                    player2.Points += rateOver;
+                    goto RESTART;
+
+                }
             myTurn(menu);
             if (whoIsFirstRand == 0)
             {
                 player2.makeBet(upperOver);
                 rateOver += upperOver;
             }
+            } while (player1.Rate == player2.Rate);
 
-            for (int i = 0; i < 3; i++)                        // 3 карти на столі   / етап 3
+            for (int i = 0; i < 3; i++)                        // 3 карти на столi   / етап 3
             {
                 cardsOnTable[i] = firstDeck.handOutCard();
             }
+            do {
             if (whoIsFirstRand == 1)                                
             {
                 player2.makeBet(upperOver);
@@ -85,7 +94,8 @@ class Game
             menu = Convert.ToInt32(Console.ReadLine());
             if (menu == 1)
             {
-                continue;
+                player2.Points += rateOver;
+                goto RESTART;
             }
             myTurn(menu);
             if (whoIsFirstRand == 0)
@@ -93,8 +103,9 @@ class Game
                 player2.makeBet(upperOver);
                 rateOver += upperOver;
             }
-                                                 
-            cardsOnTable[3] = firstDeck.handOutCard();       // 4 карти на столі   / етап 4
+            } while (player1.Rate == player2.Rate);
+            cardsOnTable[3] = firstDeck.handOutCard();       // 4 карти на столi   / етап 4
+            do { 
             if (whoIsFirstRand == 1)
             {
                 player2.makeBet(upperOver);
@@ -104,7 +115,8 @@ class Game
             menu = Convert.ToInt32(Console.ReadLine());
             if (menu == 1)
             {
-                continue;
+                player2.Points += rateOver;
+                goto RESTART;
             }
             myTurn(menu);
             if (whoIsFirstRand == 0)
@@ -112,8 +124,9 @@ class Game
                 player2.makeBet(upperOver);
                 rateOver += upperOver;
             }
-
-            cardsOnTable[4] = firstDeck.handOutCard();       // 5 карти на столі   / етап 5
+            } while (player1.Rate == player2.Rate);
+            cardsOnTable[4] = firstDeck.handOutCard();       // 5 карти на столi   / етап 5
+            do { 
             if (whoIsFirstRand == 1)
             {
                 player2.makeBet(upperOver);
@@ -123,7 +136,8 @@ class Game
             menu = Convert.ToInt32(Console.ReadLine());
             if (menu == 1)
             {
-                continue;
+                player2.Points += rateOver;
+                goto RESTART;
             }
             myTurn(menu);
             if (whoIsFirstRand == 0)
@@ -131,9 +145,7 @@ class Game
                 player2.makeBet(upperOver);
                 rateOver += upperOver;
             }
-
-
-
+            } while (player1.Rate == player2.Rate);
             void mainScreen()
             {
                 Console.Clear();
@@ -162,12 +174,20 @@ class Game
                 Console.WriteLine("                                                                                           ");
                 Console.WriteLine(" Вашi карти: "+ player1.CardsInHand[0] +"  "+ player1.CardsInHand[1] + "                   ");
                 Console.WriteLine(" Вашi $: " + player1.Points + "                                                            ");
-                if (player1.Rate>=player2.Rate)
+                if (player1.Rate==player2.Rate)
                 {
-                    Console.WriteLine(" Вашi дiї: 1-Пас, 2-Наступний хід, 3-пiдняти ставки                       ");
+                    Console.WriteLine(" Вашi дiї: 1-Пас, 2-Наступний хiд, 3-пiдняти ставки                       ");
                 }
                 else Console.WriteLine(" Вашi дiї: 1-Пас, 2-Пiдтримати ставку, 3-пiдняти ставки                       ");
             }
+       /*     void enemyTurn(int whoIsFirstRand)
+            {
+                if (whoIsFirstRand == 0)
+                {
+                    player2.makeBet(upperOver);
+                    rateOver += upperOver;
+                }
+            }*/
             void myTurn(int menu)
             {
                 if (menu == 1){}
@@ -185,20 +205,29 @@ class Game
                 }
                 else if (menu == 3)
                 {
-                    Console.WriteLine(" Введіть на скільки ви хочите підняти ставки");
-                    int newRate = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine(" Введiть на скiльки ви хочите пiдняти ставки");
+                    int newRate;
+                    try
+                    {
+                        newRate = Convert.ToInt32(Console.ReadLine());
+                    }
+
+                    catch (System.IndexOutOfRangeException)
+                    {
+                        Console.WriteLine("Ви ввели невiрне значення, спробуйте ще раз ");
+                        newRate = Convert.ToInt32(Console.ReadLine());
+                    }
                     upperOver += newRate;
+                    rateOver += upperOver;
                     player1.makeBet(upperOver);
                 }
-                else { Console.WriteLine("Ви ввели невірне значення"); }
-
+                else { Console.WriteLine("Ви ввели невiрне значення"); }
             }
         }
     }
 }
 class Player
 {
-
     private string[] cardsInHand = new string[2];
     public string[] CardsInHand 
     { 
@@ -217,8 +246,6 @@ class Player
         get { return rate; }
         set { rate = value; }
     }
-
-
     public Player(int startPoint, string[] getingCardsInHand)
     {
         points = startPoint;
@@ -242,11 +269,15 @@ class Deck
     }
     private int[] usingDeck = new int[52];
     private int takenСards = -1;
-
-    public string handOutCard(){
-        for (int i = 0; i < usingDeck.Length; i++)
+    private bool useOne = true;
+    public string handOutCard() {
+        if (useOne)
         {
-            usingDeck[i] = -2;
+            useOne = false;
+            for (int i = 0; i < usingDeck.Length; i++)
+            {
+                usingDeck[i] = -2;
+            } 
         }
         bool boo = true;
         bool whileBreaker = false;
@@ -266,11 +297,6 @@ class Deck
                 }
                 if (repeatError > 500)
                 {
-                    for (int i = 0; i < 52; i++)
-                    {
-                        Console.WriteLine(usingDeck[i]);
-                    }
-                    
                     Console.WriteLine("____________Колода закiнчилася____________");
                     Thread.Sleep(2000000);
                 }
@@ -290,7 +316,6 @@ class Deck
                     usingDeck[takenСards] = aRand;
                 }
                 boo = false;
-                
             } 
         }
         boo = true;
@@ -299,7 +324,6 @@ class Deck
         {
             return gameDeck[usingDeck[takenСards]];
         }
-   
         catch (System.IndexOutOfRangeException)
         {
             Console.WriteLine("---------------"+ usingDeck[takenСards]+"-----------------");
