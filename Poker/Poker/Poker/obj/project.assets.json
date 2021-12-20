@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Nfol\\.nuget\\packages\\": {}
+    "C:\\Users\\nfolz\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\II-K_I-C\\OOП\\М\\Poker\\Poker\\Poker\\Poker.csproj",
+      "projectUniqueName": "C:\\Users\\nfolz\\Desktop\\yn\\2k\\OOP\\Poker\\Poker\\Poker\\Poker.csproj",
       "projectName": "Poker",
-      "projectPath": "D:\\II-K_I-C\\OOП\\М\\Poker\\Poker\\Poker\\Poker.csproj",
-      "packagesPath": "C:\\Users\\Nfol\\.nuget\\packages\\",
-      "outputPath": "D:\\II-K_I-C\\OOП\\М\\Poker\\Poker\\Poker\\obj\\",
+      "projectPath": "C:\\Users\\nfolz\\Desktop\\yn\\2k\\OOP\\Poker\\Poker\\Poker\\Poker.csproj",
+      "packagesPath": "C:\\Users\\nfolz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nfolz\\Desktop\\yn\\2k\\OOP\\Poker\\Poker\\Poker\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Nfol\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nfolz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
