@@ -709,19 +709,6 @@ namespace PokerGraf
             }
             else
             {
-                try
-                {
-                    if (combinations(player1.CardsInHand) <= combinations(player2.CardsInHand))
-                    {
-                        player2.Points += rateOver;
-                    }
-
-                }
-                catch (Exception)
-                {
-                    player2.Points += rateOver;
-                }
-
                 rateOver = 0;
                 upperOver = 2;
                 cardsOnTable = new string[5];
@@ -749,8 +736,6 @@ namespace PokerGraf
                 button2.Visible = true;
                 button3.Visible = true;
                 button4.Visible = true;
-
-
                 player1.makeBet(1);
                 player2.makeBet(2);
                 rateOver += 3;
@@ -786,6 +771,13 @@ namespace PokerGraf
                 upperOver += newRate;
                 turn();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            player2.Points += rateOver;
+            button5_Click(sender, e);
+
         }
     }
 }
