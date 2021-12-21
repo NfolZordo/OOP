@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "52d72024-56f4-4e36-89c2-5457d20e7ccc": {
+      "ProjectGuid": "52d72024-56f4-4e36-89c2-5457d20e7ccc",
+      "DisplayName": "PokerGraf",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

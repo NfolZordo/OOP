@@ -1,0 +1,11 @@
+C:\Users\nfolz\Desktop\yn\2k\OOP\PokerGraf\PokerGraf\PokerGraf\bin\Debug\PokerGraf.exe.config
+C:\Users\nfolz\Desktop\yn\2k\OOP\PokerGraf\PokerGraf\PokerGraf\bin\Debug\PokerGraf.exe
+C:\Users\nfolz\Desktop\yn\2k\OOP\PokerGraf\PokerGraf\PokerGraf\bin\Debug\PokerGraf.pdb
+C:\Users\nfolz\Desktop\yn\2k\OOP\PokerGraf\PokerGraf\PokerGraf\obj\Debug\PokerGraf.csproj.AssemblyReference.cache
+C:\Users\nfolz\Desktop\yn\2k\OOP\PokerGraf\PokerGraf\PokerGraf\obj\Debug\PokerGraf.csproj.SuggestedBindingRedirects.cache
+C:\Users\nfolz\Desktop\yn\2k\OOP\PokerGraf\PokerGraf\PokerGraf\obj\Debug\PokerGraf.Form1.resources
+C:\Users\nfolz\Desktop\yn\2k\OOP\PokerGraf\PokerGraf\PokerGraf\obj\Debug\PokerGraf.Properties.Resources.resources
+C:\Users\nfolz\Desktop\yn\2k\OOP\PokerGraf\PokerGraf\PokerGraf\obj\Debug\PokerGraf.csproj.GenerateResource.cache
+C:\Users\nfolz\Desktop\yn\2k\OOP\PokerGraf\PokerGraf\PokerGraf\obj\Debug\PokerGraf.csproj.CoreCompileInputs.cache
+C:\Users\nfolz\Desktop\yn\2k\OOP\PokerGraf\PokerGraf\PokerGraf\obj\Debug\PokerGraf.exe
+C:\Users\nfolz\Desktop\yn\2k\OOP\PokerGraf\PokerGraf\PokerGraf\obj\Debug\PokerGraf.pdb

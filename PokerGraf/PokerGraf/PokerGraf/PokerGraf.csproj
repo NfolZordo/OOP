@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{52D72024-56F4-4E36-89C2-5457D20E7CCC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PokerGraf</RootNamespace>
+    <AssemblyName>PokerGraf</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\ХХ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\10Б.png" />
+    <Content Include="img\10П.png" />
+    <Content Include="img\10Х.png" />
+    <Content Include="img\10Ч.png" />
+    <Content Include="img\11Б.png" />
+    <Content Include="img\11П.png" />
+    <Content Include="img\11Х.png" />
+    <Content Include="img\11Ч.png" />
+    <Content Include="img\12Б.png" />
+    <Content Include="img\12П.png" />
+    <Content Include="img\12Х.png" />
+    <Content Include="img\12Ч.png" />
+    <Content Include="img\13Б.png" />
+    <Content Include="img\13П.png" />
+    <Content Include="img\13Х.png" />
+    <Content Include="img\13Ч.png" />
+    <Content Include="img\14Б.png" />
+    <Content Include="img\14П.png" />
+    <Content Include="img\14Х.png" />
+    <Content Include="img\14Ч.png" />
+    <Content Include="img\2Б.png" />
+    <Content Include="img\2П.png" />
+    <Content Include="img\2Х.png" />
+    <Content Include="img\2Ч.png" />
+    <Content Include="img\3Б.png" />
+    <Content Include="img\3П.png" />
+    <Content Include="img\3Х.png" />
+    <Content Include="img\3Ч.png" />
+    <Content Include="img\4Б.png" />
+    <Content Include="img\4П.png" />
+    <Content Include="img\4Х.png" />
+    <Content Include="img\4Ч.png" />
+    <Content Include="img\5Б.png" />
+    <Content Include="img\5П.png" />
+    <Content Include="img\5Х.png" />
+    <Content Include="img\5Ч.png" />
+    <Content Include="img\6Б.png" />
+    <Content Include="img\6П.png" />
+    <Content Include="img\6Х.png" />
+    <Content Include="img\6Ч.png" />
+    <Content Include="img\7Б.png" />
+    <Content Include="img\7П.png" />
+    <Content Include="img\7Х.png" />
+    <Content Include="img\7Ч.png" />
+    <Content Include="img\8Б.png" />
+    <Content Include="img\8П.png" />
+    <Content Include="img\8Х.png" />
+    <Content Include="img\8Ч.png" />
+    <Content Include="img\9Б.png" />
+    <Content Include="img\9П.png" />
+    <Content Include="img\9Х.png" />
+    <Content Include="img\9Ч.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
