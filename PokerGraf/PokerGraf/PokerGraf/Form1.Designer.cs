@@ -55,6 +55,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -75,7 +77,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -198,7 +199,7 @@
             this.button2.Text = "Пас";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Visible = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.button5_Click);
             // 
             // button3
             // 
@@ -272,7 +273,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(736, 141);
+            this.label8.Location = new System.Drawing.Point(709, 143);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(119, 31);
             this.label8.TabIndex = 20;
@@ -282,7 +283,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(861, 141);
+            this.label9.Location = new System.Drawing.Point(834, 143);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(30, 31);
             this.label9.TabIndex = 21;
@@ -316,7 +317,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(197, 20);
             this.textBox1.TabIndex = 24;
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // button5
             // 
@@ -339,10 +339,28 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(220, 64);
             this.button6.TabIndex = 26;
-            this.button6.Text = "Продовжити";
+            this.button6.Text = "Зробити ставку";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Visible = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(259, 9);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(0, 31);
+            this.label11.TabIndex = 27;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(176, 416);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(0, 31);
+            this.label12.TabIndex = 28;
             // 
             // Form1
             // 
@@ -350,6 +368,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Chartreuse;
             this.ClientSize = new System.Drawing.Size(1185, 694);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.textBox1);
@@ -422,6 +442,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
     }
 }
 
